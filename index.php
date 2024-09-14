@@ -14,7 +14,7 @@ $telefone= $_POST ['telefone'] ??null;
 ?>
 
     <h1>Cadastre-se</h1>
-    <form action="PageFuncionario.php" method="post">
+    <form action="" method="post">
         <label for="nome">Nome</label>
         <input type="text" name=nome value= <?=$nome?> >
 
@@ -34,13 +34,18 @@ $telefone= $_POST ['telefone'] ??null;
     </form>
 <?php
 if(isset($_POST['submit'])){
-    $pessoa :: CadastrarNome($nome);
+    $pessoa-> CadastrarNome($nome);
     $pessoa->CadastrarTelefone($this->telefone);     
     $pessoa->CadastrarCpf($this->cpf);
     $pessoa->cadastrarEmail($this->email);
 
     $pessoa-> MostrarNome();
  }else{
+    $pessoa-> CadastrarNome($nome);
+    $pessoa->CadastrarTelefone($telefone);     
+    $pessoa->CadastrarCpf($cpf);
+    $pessoa->cadastrarEmail($email);
+
     $pessoa-> MostrarNome();
  }
 require_once ('fim.php');
