@@ -1,8 +1,7 @@
 <?php
 class Gerente extends Funcionario {
 
-    private $registro;
-    private $cpf;
+    protected $registro;
     protected $setor;
 
     public function MudarSetor ($setor){

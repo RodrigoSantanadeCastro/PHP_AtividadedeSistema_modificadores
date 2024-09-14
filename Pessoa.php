@@ -1,9 +1,9 @@
 <?php
 
 class Pessoa {
-    public $nome;
+    protected $nome;
     protected $email;
-    private $cpf;
+    protected $cpf;
     protected $telefone;
 
     
@@ -17,6 +17,14 @@ class Pessoa {
 
     public function cadastrarCpf ($cpf){
         $this->cpf = $cpf;
+    }
+
+    public function CadastrarNome($nome){
+        $this->nome = $nome;
+    }
+
+    public function MostrarNome(){
+        echo $this->nome."ola";
     }
     
 

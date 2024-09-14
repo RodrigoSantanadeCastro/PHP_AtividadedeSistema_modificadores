@@ -2,13 +2,13 @@
 
 class Funcionario extends Pessoa {
     protected $cep;
-    protected $cargo;
+    private $cargo;
     protected $turno;
-    private $registro;
+    protected $registro;
     protected $dataNasc;
-    private $tipodecontrato;
+    protected $tipodecontrato;
     protected $salario;
-    private $cpf;
+    
 
     public function cadastrarCep ($cep){
         $this->cep = $cep;

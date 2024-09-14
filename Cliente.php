@@ -4,8 +4,15 @@ class Cliente extends Pessoa {
 
     private $tipo;
     private $endereco;
-    protected $cpf;
+    
+    public function CadastrarTipo($tipo){
+        $this->tipo=$tipo;
 
+    }
+
+    public function CadastrarEndereco($endereco){
+        $this->endereco=$endereco;
+    }
     
 
 }
