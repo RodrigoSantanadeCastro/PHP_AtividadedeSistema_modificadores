@@ -24,7 +24,15 @@ class Pessoa {
     }
 
     public function MostrarNome(){
-        echo $this->nome."ola";
+        echo $this->nome;
+    }
+
+    public function MostrarTelefone(){
+        echo $this->telefone;
+    }
+
+    public function MostrarEmail(){
+        echo $this->email;
     }
     
 

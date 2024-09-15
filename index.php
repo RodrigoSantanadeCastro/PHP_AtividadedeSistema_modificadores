@@ -35,9 +35,9 @@ $telefone= $_POST ['telefone'] ??null;
 <?php
 if(isset($_POST['submit'])){
     $pessoa-> CadastrarNome($nome);
-    $pessoa->CadastrarTelefone($this->telefone);     
-    $pessoa->CadastrarCpf($this->cpf);
-    $pessoa->cadastrarEmail($this->email);
+    $pessoa->CadastrarTelefone($telefone);     
+    $pessoa->CadastrarCpf($cpf);
+    $pessoa->cadastrarEmail($email);
 
     $pessoa-> MostrarNome();
  }else{
@@ -47,6 +47,9 @@ if(isset($_POST['submit'])){
     $pessoa->cadastrarEmail($email);
 
     $pessoa-> MostrarNome();
+    $pessoa-> MostrarEmail();
+    $pessoa-> MostrarTelefone();
+
  }
 require_once ('fim.php');
 ?>

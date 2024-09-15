@@ -2,23 +2,21 @@
 require_once ('inicio.php');
 require_once ('Pessoa.php');
 require_once ('Funcionario.php');
-
+require_once ('Diretor.php');
 ?>
 
 <?php
-$funcionario = new Funcionario();
+$diretor= new Diretor();
 $nome= $_POST ['nome'] ??null ;
 $email=$_POST ['email'] ??null;
 $cpf=$_POST ['cpf'] ??null;
 $telefone=$_POST ['telefone'] ??null;
-$cep=$_POST ['cep'] ??null;
-$cargo=$_POST['cargo'] ??null;
+$cep=$_POST['cep'] ??null;
 $turno=$_POST['turno'] ??null;
 $registro=$_POST['registro'] ??null;
 $dataNasc=$_POST['dataNasc'] ??null;
 $tipodecontrato=$_POST['tipodecontrato'] ??null;
 $salario=$_POST['salario'] ??null;
-
 
 
 ?>
@@ -39,9 +37,6 @@ $salario=$_POST['salario'] ??null;
 
         <label for="cep">CEP</label>
         <input type="text" name=cep value= <?=$cep?> >
-        
-        <label for="cargo">Cargo</label>
-        <input type="text" name=cargo value= <?=$cargo?> >
 
         <label for="turno">Turno</label>
         <input type="text" name=turno value= <?=$turno?> >
@@ -59,46 +54,49 @@ $salario=$_POST['salario'] ??null;
         <label for="salario">Salario</label>
         <input type="number" name=salalrio value= <?=$salario?> >
 
+        
+
 
 
         <input type="submit" value="Enviar">
 
-       
+        
+        
     </form>
 
 <?php
 if(isset($_POST['submit'])){
-    $funcionario->CadastrarNome($nome);
-    $funcionario->CadastrarTelefone($telefone);     
-    $funcionario->CadastrarCpf($cpf);
-    $funcionario->CadastrarEmail($email);
-    $funcionario->CadastrarCep($cep);
-    $funcionario->cadastrarCargo($cargo);
-    $funcionario->cadastrarTurno($turno);
-    $funcionario->alterarRegistro($registro);
-    $funcionario->alterarContrato($tipodecontrato);
-    $funcionario->cadastrarSalario($salario);
+    $diretor->CadastrarNome($nome);
+    $diretor->CadastrarTelefone($telefone);     
+    $diretor->CadastrarCpf($cpf);
+    $diretor->CadastrarEmail($email);
+    $diretor->CadastrarCep($cep);
+    $diretor->cadastrarTurno($turno);
+    $diretor->alterarRegistro($registro);
+    $diretor->alterarContrato($tipodecontrato);
+    $diretor->cadastrarSalario($salario);
+    
 
-    $funcionario-> MostrarNome();
-    $funcionario-> MostrarNome();
-    $funcionario-> MostrarEmail();
-    $funcionario-> MostrarTelefone();
+    $diretor-> MostrarNome();
+    $diretor-> MostrarNome();
+    $diretor-> MostrarEmail();
+    $diretor-> MostrarTelefone();
  }else{
-    $funcionario->CadastrarNome($nome);
-    $funcionario->CadastrarTelefone($telefone);     
-    $funcionario->CadastrarCpf($cpf);
-    $funcionario->CadastrarEmail($email);
-    $funcionario->CadastrarCep($cep);
-    $funcionario->cadastrarCargo($cargo);
-    $funcionario->cadastrarTurno($turno);
-    $funcionario->alterarRegistro($registro);
-    $funcionario->alterarContrato($tipodecontrato);
-    $funcionario->cadastrarSalario($salario);
+    $diretor->CadastrarNome($nome);
+    $diretor->CadastrarTelefone($telefone);     
+    $diretor->CadastrarCpf($cpf);
+    $diretor->CadastrarEmail($email);
+    $diretor->CadastrarCep($cep);
+    $diretor->cadastrarTurno($turno);
+    $diretor->alterarRegistro($registro);
+    $diretor->alterarContrato($tipodecontrato);
+    $diretor->cadastrarSalario($salario);
+    
 
-    $funcionario-> MostrarNome();
-    $funcionario-> MostrarNome();
-    $funcionario-> MostrarEmail();
-    $funcionario-> MostrarTelefone();
+    $diretor-> MostrarNome();
+    $diretor-> MostrarNome();
+    $diretor-> MostrarEmail();
+    $diretor-> MostrarTelefone();
  }
 
 
