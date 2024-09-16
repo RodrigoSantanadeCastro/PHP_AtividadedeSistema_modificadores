@@ -67,7 +67,7 @@ $salario=$_POST['salario'] ??null;
     </form>
 
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['nome'])){
     $funcionario->CadastrarNome($nome);
     $funcionario->CadastrarTelefone($telefone);     
     $funcionario->CadastrarCpf($cpf);
@@ -79,26 +79,11 @@ if(isset($_POST['submit'])){
     $funcionario->alterarContrato($tipodecontrato);
     $funcionario->cadastrarSalario($salario);
 
-    $funcionario-> MostrarNome();
     $funcionario-> MostrarNome();
     $funcionario-> MostrarEmail();
     $funcionario-> MostrarTelefone();
  }else{
-    $funcionario->CadastrarNome($nome);
-    $funcionario->CadastrarTelefone($telefone);     
-    $funcionario->CadastrarCpf($cpf);
-    $funcionario->CadastrarEmail($email);
-    $funcionario->CadastrarCep($cep);
-    $funcionario->cadastrarCargo($cargo);
-    $funcionario->cadastrarTurno($turno);
-    $funcionario->alterarRegistro($registro);
-    $funcionario->alterarContrato($tipodecontrato);
-    $funcionario->cadastrarSalario($salario);
-
-    $funcionario-> MostrarNome();
-    $funcionario-> MostrarNome();
-    $funcionario-> MostrarEmail();
-    $funcionario-> MostrarTelefone();
+    echo "Erro";
  }
 
 
