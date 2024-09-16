@@ -42,7 +42,7 @@ $endereco=$_POST['endereco'] ??null;
         
     </form>
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['nome'])){
     $cliente->CadastrarNome($nome);
     $cliente->CadastrarTelefone($telefone);     
     $cliente->CadastrarCpf($cpf);
@@ -54,16 +54,7 @@ if(isset($_POST['submit'])){
     $cliente-> MostrarEmail();
     $cliente-> MostrarTelefone();
  }else{
-    $cliente->CadastrarNome($nome);
-    $cliente->CadastrarTelefone($telefone);     
-    $cliente->CadastrarCpf($cpf);
-    $cliente->CadastrarEmail($email);
-    $cliente->CadastrarTipo($tipo);
-    $cliente->CadastrarEndereco($endereco);
-
-    $cliente-> MostrarNome();
-    $cliente-> MostrarEmail();
-    $cliente-> MostrarTelefone();
+    echo "ERRO";
  }
 require_once ('fim.php');
 ?>

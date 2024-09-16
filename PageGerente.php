@@ -68,7 +68,7 @@ $setor=$_POST['setor'] ??null;
     </form>
 
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['nome'])){
     $gerente->CadastrarNome($nome);
     $gerente->CadastrarTelefone($telefone);     
     $gerente->CadastrarCpf($cpf);
@@ -85,21 +85,7 @@ if(isset($_POST['submit'])){
     $gerente-> MostrarEmail();
     $gerente-> MostrarTelefone();
  }else{
-    $gerente->CadastrarNome($nome);
-    $gerente->CadastrarTelefone($telefone);     
-    $gerente->CadastrarCpf($cpf);
-    $gerente->CadastrarEmail($email);
-    $gerente->CadastrarCep($cep);
-    $gerente->cadastrarTurno($turno);
-    $gerente->alterarRegistro($registro);
-    $gerente->alterarContrato($tipodecontrato);
-    $gerente->cadastrarSalario($salario);
-    $gerente->MudarSetor($setor);
-
-    $gerente-> MostrarNome();
-    $gerente-> MostrarNome();
-    $gerente-> MostrarEmail();
-    $gerente-> MostrarTelefone();
+    echo " ERRO";
  }
 
 

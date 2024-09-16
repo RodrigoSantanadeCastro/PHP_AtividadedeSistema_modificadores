@@ -33,7 +33,7 @@ $telefone= $_POST ['telefone'] ??null;
         
     </form>
 <?php
-if(isset($_POST['submit'])){
+if(isset($_POST['nome'])){
     $pessoa-> CadastrarNome($nome);
     $pessoa->CadastrarTelefone($telefone);     
     $pessoa->CadastrarCpf($cpf);
@@ -41,14 +41,7 @@ if(isset($_POST['submit'])){
 
     $pessoa-> MostrarNome();
  }else{
-    $pessoa-> CadastrarNome($nome);
-    $pessoa->CadastrarTelefone($telefone);     
-    $pessoa->CadastrarCpf($cpf);
-    $pessoa->cadastrarEmail($email);
-
-    $pessoa-> MostrarNome();
-    $pessoa-> MostrarEmail();
-    $pessoa-> MostrarTelefone();
+    echo "ERRO";
 
  }
 require_once ('fim.php');
